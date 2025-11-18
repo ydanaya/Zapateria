@@ -15,11 +15,19 @@
     }
     *{box-sizing:border-box; font-family:-apple-system,Arial}
     body{
-      margin:0;display:flex;justify-content:center;align-items:center;height:100vh;background:var(--bg);
+      margin:0;display:flex;justify-content:center;height:100vh;background:var(--bg);
     }
-    .iphone{
-      width:var(--iphone-w);height:var(--iphone-h);background:white;border-radius:40px;overflow:hidden;position:relative;box-shadow:0 0 40px rgba(0,0,0,0.2);
-    }
+    .iphone {
+  width: var(--iphone-w);
+  height: var(--iphone-h);
+  background: white;
+  border-radius: 40px;
+  overflow: hidden;  /* ya está, perfecto */
+  position: relative;
+  box-shadow: 0 0 40px rgba(0,0,0,0.2);
+  display: flex;     /* nuevo */
+  flex-direction: column; /* organiza pantallas dentro */
+}
     /* PANTALLAS */
     .screen{display:none;position:absolute;width:100%;height:100%;top:0;left:0;overflow-y:auto;padding:20px;}
     .active{display:block;}
@@ -405,7 +413,7 @@ document.getElementById("btnAgregarCarrito").onclick = function () {
         colorZapato: zapato,
         cordones: cordones,
         texto: texto,
-        img: "images/custom.png" // o lo que uses
+        img: "images/personalizado.jpg" 
     };
 
     // AGREGAR AL CARRITO
